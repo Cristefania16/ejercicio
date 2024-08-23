@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservación de Hoteles</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h1>Reservación de Hotel</h1>
+
+    <form id="reservation-form">
+        <label for="dates">Ingresa las fechas (ddMmmYYYY, ddMmmYYYY, ...):</label>
+        <input type="text" id="dates" name="dates" placeholder="16Mar2009, 17Mar2009, 18Mar2009" required>
+
+        <div class="toggle-group">
+            <label>Tipo de Cliente:</label>
+            <label>
+                <input type="radio" name="customer-type" value="Regular" checked> Regular
+            </label>
+            <label>
+                <input type="radio" name="customer-type" value="Rewards"> Recompensas
+            </label>
+        </div>
+
+        <button type="submit">Buscar Hotel</button>
+    </form>
+
+    <div id="hotel-cards">
+        <div class="hotel-card" id="Lakewood">
+            <h2>Lakewood</h2>
+            <p class="stars">⭐⭐⭐</p>
+            <p>Semana (Regular): $110</p>
+            <p>Semana (Recompensas): $80</p>
+            <p>Fin de Semana (Regular): $90</p>
+            <p>Fin de Semana (Recompensas): $80</p>
+            <p id="Lakewood-price"></p>
+        </div>
+
+        <div class="hotel-card" id="Bridgewood">
+            <h2>Bridgewood</h2>
+            <p class="stars">⭐⭐⭐⭐</p>
+            <p>Semana (Regular): $160</p>
+            <p>Semana (Recompensas): $110</p>
+            <p>Fin de Semana (Regular): $60</p>
+            <p>Fin de Semana (Recompensas): $50</p>
+            <p id="Bridgewood-price"></p>
+        </div>
+
+        <div class="hotel-card" id="Ridgewood">
+            <h2>Ridgewood</h2>
+            <p class="stars">⭐⭐⭐⭐⭐</p>
+            <p>Semana (Regular): $220</p>
+            <p>Semana (Recompensas): $100</p>
+            <p>Fin de Semana (Regular): $150</p>
+            <p>Fin de Semana (Recompensas): $40</p>
+            <p id="Ridgewood-price"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
